@@ -45,7 +45,7 @@ const useApi = url => {
 						error.message = response.data.message;
 						throw error;
 					}
-					setResponse(response.data.message);
+					setResponse(response.data);
 				})
 				.catch((error) => {
 					setLoading(false);

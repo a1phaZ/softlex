@@ -9,6 +9,10 @@ const TasksTableHead = ({names, sorting, sortTasks}) => {
 		if (name.toLowerCase() === sorting.field) {
 			direction = direction === sorting.direction ? DESC : ABC;
 		}
+		
+		if (name.toLowerCase() === 'edit') {
+			return <th scope={'col'} key={key}>{name}</th>
+		}
 		return (
 			<th
 				scope="col"
